@@ -30,14 +30,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="./students.html">Мои ученики</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                   aria-haspopup="true" aria-expanded="false">Отзывы</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./feedbacks.html">Action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="./feedbacks.html">Отзывы</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./prices.html">Цены и Акции</a>
@@ -749,7 +743,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright">
-                        <p>© 2018 Математичка! Design with love by Серёжа</p>
+                        <p>© 2018 Математичка!  </p>
                     </div>
                 </div>
             </div>
@@ -777,7 +771,16 @@
                 $(".card").hide().filter('[data-key="' + $(this).text() + '"]').show();
             }
         })
-    })
+    });
+    $(window).on("load", function() {
+        let elems = document.querySelectorAll("div[data-key]");
+        let index = 0, length = elems.length;
+        for ( ; index < length; index++) {
+            elems[index].style.visibility = "visible";
+            elems[index].style.opacity = 1;
+            elems[index].style.transition = "visibility 0s, opacity 0.5s linear";
+        }
+    });
 </script>
 
 </body>

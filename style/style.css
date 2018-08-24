@@ -1,20 +1,7 @@
 body, html {
     height: 100%;
-
-    /* The image used */
     background-image: url(../img/bg/bg.jpg);
-
-    /* Center and scale the image nicely */
     background-repeat-x: repeat;
-}
-
-p {
-    font-family: "Poppins", Arial, serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.8;
-    color: #788487;
-    text-align: left;
 }
 
 .bottom-block {
@@ -25,6 +12,10 @@ p {
 .iframe_flex iframe {
     width: 100%;
     height: 100%;
+}
+
+div[data-key] {
+    visibility: hidden;
 }
 
 @media (min-width: 576px) {
@@ -46,15 +37,44 @@ p {
     }
 }
 
+@media (min-width: 992px) {
+    .modal-lg {
+        max-width: 960px;
+    }
+}
+
 #location {
     top: 0;
     left: 0;
     width: 100%;
     height: 390px;
-    /*margin-bottom: 30px;*/
 }
 
 .table-info-custom {
     background-color: #97eefb38;
+}
+
+.custom-list > li {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+
+.card-header {
+    background-color: rgba(167, 221, 245, 0.36);
+}
+
+#image-gallery .modal-footer {
+    display: block;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 576px) {
+    .main-page-cards {
+        padding: 0 !important;
+    }
 }
 
