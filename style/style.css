@@ -89,3 +89,7 @@ div[data-key] {
 .table td, .table th {
     padding: .3rem;
 }
+
+.bg-blue-transparent {
+    background-color: #709ecced
+}
