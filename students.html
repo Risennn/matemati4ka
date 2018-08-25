@@ -56,18 +56,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="card-columns py-5">
+            <div class="card-columns py-5 text-shadow">
                 <!--2015 start-->
                 <div data-key="2015" class="card bg-dark text-white">
                     <img class="card-img" src="img/studs/2015/Александр.jpg" alt="#">
                     <div class="card-img-overlay d-flex flex-column justify-content-between">
-                        <h5 class="card-title text-center bottom-block align-bottom">Александр</h5>
+                        <h5 class="card-title text-center bottom-block">Александр</h5>
                     </div>
                 </div>
                 <div data-key="2015" class="card bg-dark text-white">
                     <img class="card-img" src="img/studs/2015/Аня.jpg" alt="#">
                     <div class="card-img-overlay d-flex flex-column justify-content-between">
-                        <h5 class="card-title text-center bottom-block align-bottom">Аня</h5>
+                        <h5 class="card-title text-center bottom-block">Аня</h5>
                     </div>
                 </div>
                 <div data-key="2015" class="card bg-dark text-white">
@@ -332,7 +332,7 @@
                 </div>
                 <div data-key="2016" class="card bg-dark text-white">
                     <img class="card-img" src="img/studs/2016/Марина.jpg" alt="#">
-                        <div class="card-img-overlay">
+                    <div class="card-img-overlay">
                         <h5 class="card-title text-center bottom-block">Марина</h5>
                     </div>
                 </div>
@@ -743,7 +743,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright">
-                        <p>© 2018 Математичка!  </p>
+                        <p>© 2018 Математичка! </p>
                     </div>
                 </div>
             </div>
@@ -772,10 +772,10 @@
             }
         })
     });
-    $(window).on("load", function() {
+    $(window).on("load", function () {
         let elems = document.querySelectorAll("div[data-key]");
         let index = 0, length = elems.length;
-        for ( ; index < length; index++) {
+        for (; index < length; index++) {
             elems[index].style.visibility = "visible";
             elems[index].style.opacity = 1;
             elems[index].style.transition = "visibility 0s, opacity 0.5s linear";
