@@ -93,3 +93,18 @@ div[data-key] {
 .bg-blue-transparent {
     background-color: #709ecced
 }
+
+#toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 770px) {
+    .footer {
+        position: absolute;
+        bottom: auto;
+    }
+}
