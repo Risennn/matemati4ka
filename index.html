@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Репетитор по матиматике для школьников и абитуриентов на Осокорках и Позняках" />
-    <meta name="keywords" content="репетитор, математика, подготовка, ЗНО, ДПА, Осокорки, Позняки, цена" />
-    <meta name="author" content="Сосонная Юлия Владимировна" />
+    <meta name="description" content="Репетитор по матиматике для школьников и абитуриентов на Осокорках и Позняках"/>
+    <meta name="keywords" content="репетитор, математика, подготовка, ЗНО, ДПА, Осокорки, Позняки, цена"/>
+    <meta name="author" content="Сосонная Юлия Владимировна"/>
     <meta http-equiv="content-language" content="ru">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <!-- Bootstrap CSS -->
@@ -50,6 +50,15 @@
 
 <!-- Main Container -->
 <main role='main' class="container">
+    <div class="panel panel-primary bg-white py-xl-5 px-xl-5 rounded border border-danger border-3">
+        <span class="pull-right clickable" data-effect="fadeOut"><i class="fa fa-times"></i></span>
+        <div class="panel-heading">
+            <h2>Уважаемые родители и ученики,</h2>
+        </div>
+        <div class="panel-body font-weight-normal pt-5">
+            <p class="larger-text">Набор на 2018/2019 учебный год завершён. Жду Вас в следующем году!</p>
+        </div>
+    </div>
     <div class="container text-white rounded bg-blue-transparent">
         <div class="row justify-content-md-between" id="dossier">
             <div class="col-md-4 order-md-2 nopadding">
@@ -58,11 +67,16 @@
                      title="Репетитор по матиматеке на м. Осокорки и Позняки">
             </div>
             <div class="col-md-8 order-md-1 my-auto">
-                <h2 class="font-italic">Здравствуйте,<br> <small>я Юлия Владимировна, репетитор по математике для
-                    школьников и абитуриентов на Осокорках, Позняках.</small></h2>
-                <h5 class="font-weight-normal pt-5">Я окончила Национальный педадогический университет им. М.П. Драгоманова. Преподаю математику более 5 лет.
-                Я - профессиональный репетитор, репетиторская деятельность является моей основной профессией, а не просто хобби.
-                Я настолько люблю то, что делаю, что погружаюсь полностью в работу и постоянно развиваюсь.</h5>
+                <h2 class="font-italic">Здравствуйте,<br>
+                    <small>я Юлия Владимировна, репетитор по математике для
+                        школьников и абитуриентов на Осокорках, Позняках.
+                    </small>
+                </h2>
+                <h5 class="font-weight-normal pt-5">Я окончила Национальный педадогический университет им. М.П.
+                    Драгоманова. Преподаю математику более 5 лет.
+                    Я - профессиональный репетитор, репетиторская деятельность является моей основной профессией, а не
+                    просто хобби.
+                    Я настолько люблю то, что делаю, что погружаюсь полностью в работу и постоянно развиваюсь.</h5>
             </div>
         </div>
     </div>
@@ -212,7 +226,7 @@
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('body').append('<div id="toTop" class="btn btn-info"><i class="fas fa-chevron-up"></i></div>');
         $(window).scroll(function () {
             if ($(this).scrollTop() !== 0) {
@@ -221,11 +235,17 @@
                 $('#toTop').fadeOut();
             }
         });
-        $('#toTop').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 600);
+        $('#toTop').click(function () {
+            $("html, body").animate({scrollTop: 0}, 600);
             return false;
         });
     });
+    $(function () {
+        $('.clickable').on('click', function () {
+            let effect = $(this).data('effect');
+            $(this).closest('.panel')[effect]();
+        })
+    })
 </script>
 
 </body>
